@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 import { TvDto } from '../models/tv';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MoviesService {
   baseUrl: string = 'https://api.themoviedb.org/3';
@@ -15,18 +15,22 @@ export class MoviesService {
   constructor(private http: HttpClient) {}
 
   getMovies(type: string = 'upcoming', count: number = 12) {
-    return this.http.get<MovieDto>(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`).pipe(
-      switchMap((res) => {
-        return of(res.results.slice(0, count));
-      })
-    );
+    return this.http
+      .get<MovieDto>(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.results.slice(0, count));
+        })
+      );
   }
 
   getTvs(type: string = 'latest', count: number = 12) {
-    return this.http.get<TvDto>(`${this.baseUrl}/tv/${type}?api_key=${this.apiKey}`).pipe(
-      switchMap((res) => {
-        return of(res.results.slice(0, count));
-      })
-    );
+    return this.http
+      .get<TvDto>(`${this.baseUrl}/tv/${type}?api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.results.slice(0, count));
+        })
+      );
   }
 }
