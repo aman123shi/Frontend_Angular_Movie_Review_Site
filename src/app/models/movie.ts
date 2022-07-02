@@ -15,7 +15,7 @@ export interface Movie {
   vote_count: number;
 }
 
-//Data type for retrieved services in http requests
+//Data type for retrieved items in http requests
 export interface MovieDto {
   page: number;
   results: Movie[];
