@@ -23,9 +23,11 @@ export class MoviesService {
         })
       );
   }
-  searchMovies() {
+  searchMovies(page: number = 1) {
     return this.http
-      .get<MovieDto>(`${this.baseUrl}/movie/popular?api_key=${this.apiKey}`)
+      .get<MovieDto>(
+        `${this.baseUrl}/movie/popular?page=${page}api_key=${this.apiKey}`
+      )
       .pipe(
         switchMap((res) => {
           return of(res.results);
