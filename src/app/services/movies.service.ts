@@ -23,6 +23,15 @@ export class MoviesService {
         })
       );
   }
+  searchMovies() {
+    return this.http
+      .get<MovieDto>(`${this.baseUrl}/movie/popular?api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
+  }
 
   getTvs(type: string = 'latest', count: number = 12) {
     return this.http
