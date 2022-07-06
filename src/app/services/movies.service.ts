@@ -11,8 +11,8 @@ import { TvDto } from '../models/tv';
 })
 export class MoviesService {
   baseUrl: string = 'https://api.themoviedb.org/3';
-  apiKey: string = '8c247ea0b4b56ed2ff7d41c9a833aa77';
-
+  apiKey: string = '7d60b137ff9763298099f27180b05716';
+  //8c247ea0b4b56ed2ff7d41c9a833aa77
   constructor(private http: HttpClient) {}
 
   getMovies(type: string = 'upcoming', count: number = 12) {
@@ -32,7 +32,7 @@ export class MoviesService {
   searchMovies(page: number = 1) {
     return this.http
       .get<MovieDto>(
-        `${this.baseUrl}/movie/popular?page=${page}api_key=${this.apiKey}`
+        `${this.baseUrl}/movie/popular?page=${page}&api_key=${this.apiKey}`
       )
       .pipe(
         switchMap((res) => {

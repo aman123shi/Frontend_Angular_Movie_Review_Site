@@ -15,11 +15,14 @@ export class MoviesComponent implements OnInit {
     this.getPagedMovies(1);
   }
   getPagedMovies(page: number = 1) {
-    this.movieService
-      .searchMovies(page)
-      .subscribe((movies) => (this.movies = movies));
+    this.movieService.searchMovies(page).subscribe((movies) => {
+      console.log(movies);
+
+      this.movies = movies;
+    });
   }
   paginate(event: any) {
-    //TODO: when internet is active
+    let page = event.page + 1;
+    this.getPagedMovies(page);
   }
 }
