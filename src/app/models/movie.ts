@@ -16,6 +16,7 @@ export interface Movie {
   revenue: number;
   runtime: number;
   status: string;
+  genres: Genera[];
 }
 
 //Data type for retrieved items in http requests
@@ -24,4 +25,8 @@ export interface MovieDto {
   results: Movie[];
   total_results: number;
   total_pages: number;
+}
+export interface Genera {
+  id: number;
+  name: string;
 }
