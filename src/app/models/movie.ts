@@ -13,6 +13,7 @@ export interface Movie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  revenue: number;
 }
 
 //Data type for retrieved items in http requests

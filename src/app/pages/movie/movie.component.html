@@ -3,8 +3,40 @@
 </ng-container>
 <div>
   <p-tabView>
-    <p-tabPanel header="Header 1"> Content 1 </p-tabPanel>
-    <p-tabPanel header="Header 2"> Content 2 </p-tabPanel>
+    <p-tabPanel header="Header 1">
+      <div class="grid">
+        <div class="col-12 md:col-3 lg:col-3">
+          <img
+            class="poster"
+            [src]="imagesSizes.medium + movie?.poster_path"
+            [alt]="movie?.title"
+          />
+        </div>
+        <div class="col-12 md:col-9 lg:col-9">
+          <h2>overview</h2>
+          <div class="overview">{{ movie?.overview }}</div>
+          <div class="stat">
+            <div class="label">Release Date:</div>
+            <div class="value">
+              {{ movie?.release_date | date: "dd.MM.yyyy" }}
+            </div>
+          </div>
+          <div class="stat">
+            <div class="label">Language:</div>
+            <div class="value">
+              {{ movie?.original_language | uppercase }}
+            </div>
+          </div>
+          <div class="stat">
+            <div class="label">Revenue:</div>
+            <div class="value">
+              {{ movie?.revenue | currency }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Header 2"> videos </p-tabPanel>
     <p-tabPanel header="Header 3"> Content 3 </p-tabPanel>
   </p-tabView>
 </div>
