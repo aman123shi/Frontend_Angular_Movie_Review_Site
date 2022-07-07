@@ -33,6 +33,16 @@
               {{ movie?.revenue | currency }}
             </div>
           </div>
+          <div class="stat">
+            <div class="label">Duration:</div>
+            <div class="value">{{ movie?.runtime }} min</div>
+          </div>
+          <div class="stat">
+            <div class="label">Status:</div>
+            <div class="value">
+              {{ movie?.status }}
+            </div>
+          </div>
         </div>
       </div>
     </p-tabPanel>

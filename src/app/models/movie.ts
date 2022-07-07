@@ -14,6 +14,8 @@ export interface Movie {
   vote_average: number;
   vote_count: number;
   revenue: number;
+  runtime: number;
+  status: string;
 }
 
 //Data type for retrieved items in http requests
