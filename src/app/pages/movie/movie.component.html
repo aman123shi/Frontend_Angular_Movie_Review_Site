@@ -63,6 +63,19 @@
         </ng-container>
       </div>
     </p-tabPanel>
-    <p-tabPanel header="Photos"> Content 3 </p-tabPanel>
+    <p-tabPanel header="Photos">
+      <div class="grid">
+        <ng-container *ngFor="let image of movieImages?.backdrops">
+          <div class="col-12 md:col-4 lg:col-4">
+            <p-image
+              [src]="imagesSizes.medium + image.file_path"
+              [preview]="true"
+              alt="Image"
+              width="100%"
+            ></p-image>
+          </div>
+        </ng-container>
+      </div>
+    </p-tabPanel>
   </p-tabView>
 </div>

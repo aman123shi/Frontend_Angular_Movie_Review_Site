@@ -14,6 +14,7 @@ import { ItemsBannerComponent } from './components/items-banner/items-banner.com
 import { ItemComponent } from './components/item/item.component';
 import { MovieComponent } from './pages/movie/movie.component';
 //primeNG imports
+import { ImageModule } from 'primeng/image';
 import { PaginatorModule } from 'primeng/paginator';
 import { TabViewModule } from 'primeng/tabview';
 import { EmbedVideoComponent } from './components/embed-video/embed-video.component';
@@ -36,6 +37,7 @@ import { EmbedVideoComponent } from './components/embed-video/embed-video.compon
     AppRoutingModule,
     HttpClientModule,
     //prime NG
+    ImageModule,
     PaginatorModule,
     TabViewModule,
   ],
