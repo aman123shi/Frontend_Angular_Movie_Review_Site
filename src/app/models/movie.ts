@@ -30,3 +30,12 @@ export interface Genera {
   id: number;
   name: string;
 }
+export interface MovieVideoDto {
+  id: number;
+  results: MovieVideo[];
+}
+
+export interface MovieVideo {
+  key: string;
+  site: string;
+}
