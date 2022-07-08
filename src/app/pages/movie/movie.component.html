@@ -54,7 +54,15 @@
         </div>
       </div>
     </p-tabPanel>
-    <p-tabPanel header="videos"> </p-tabPanel>
-    <p-tabPanel header="Header 3"> Content 3 </p-tabPanel>
+    <p-tabPanel header="videos">
+      <div class="grid">
+        <ng-container *ngFor="let video of movieVideos">
+          <div class="col-12 md:col-4 lg:col-4">
+            <embed-video [key]="video.key" [site]="video.site"></embed-video>
+          </div>
+        </ng-container>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Photos"> Content 3 </p-tabPanel>
   </p-tabView>
 </div>

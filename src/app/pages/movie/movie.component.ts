@@ -12,6 +12,7 @@ export class MovieComponent implements OnInit {
   movie: Movie | null = null;
   imagesSizes = IMAGES_SIZES;
   movieVideos: MovieVideo[] = [];
+
   constructor(
     private router: ActivatedRoute,
     private moviesService: MoviesService
