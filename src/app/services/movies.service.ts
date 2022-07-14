@@ -25,6 +25,17 @@ export class MoviesService {
         })
       );
   }
+  getMoviesByGenre(genreId: string, page: number = 1) {
+    return this.http
+      .get<MovieDto>(
+        `${this.baseUrl}/discover/movie?page=${page}&with_genres=${genreId}&api_key=${this.apiKey}`
+      )
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
+  }
   getMovie(id: string) {
     return this.http.get<Movie>(
       `${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`
