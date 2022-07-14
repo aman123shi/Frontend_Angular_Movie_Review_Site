@@ -5,6 +5,7 @@ import { Movie } from '../models/movie';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { TvDto } from '../models/tv';
+import { GenresDto } from '../models/genre';
 
 @Injectable({
   providedIn: 'root',
@@ -37,6 +38,15 @@ export class MoviesService {
       .pipe(
         switchMap((res) => {
           return of(res.results);
+        })
+      );
+  }
+  getMoviesGenres() {
+    return this.http
+      .get<GenresDto>(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}`)
+      .pipe(
+        switchMap((res) => {
+          return of(res.genres);
         })
       );
   }
