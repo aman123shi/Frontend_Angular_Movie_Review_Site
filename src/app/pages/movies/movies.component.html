@@ -1,5 +1,24 @@
 <div class="container">
   <div class="grid">
+    <div class="col-12 p-fluid">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          placeholder="Search"
+          [(ngModel)]="searchValue"
+          (change)="searchValueChanged()"
+        />
+      </span>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-12">
+      <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+    </div>
+  </div>
+  <div class="grid">
     <div class="col-6 md:col-3 lg:col-3" *ngFor="let movie of movies">
       <item [itemData]="movie"></item>
     </div>

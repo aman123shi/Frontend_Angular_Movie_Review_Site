@@ -14,6 +14,8 @@ import { ItemsBannerComponent } from './components/items-banner/items-banner.com
 import { ItemComponent } from './components/item/item.component';
 import { MovieComponent } from './pages/movie/movie.component';
 //primeNG imports
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { InputTextModule } from 'primeng/inputtext';
 import { ImageModule } from 'primeng/image';
 import { PaginatorModule } from 'primeng/paginator';
 import { TabViewModule } from 'primeng/tabview';
@@ -39,6 +41,8 @@ import { MovieGenresComponent } from './pages/movie-genres/movie-genres.componen
     AppRoutingModule,
     HttpClientModule,
     //prime NG
+    NgxSpinnerModule,
+    InputTextModule,
     ImageModule,
     PaginatorModule,
     TabViewModule,
