@@ -1,7 +1,17 @@
 # Frontend
+different sections of the movie like upcoming,most popular......
+![My Image](images/movie_review1.png)
 
+you can get a detail overview about the movie including trailers and images of the movie
+![My Image](images/movie_review2.png)
+
+you can serach any movie by typing in the search box 
+![My Image](images/movie_review3.png)
+
+you can filter any movies by genres 
+![My Image](images/movie_review4.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
-
+it uses the themoviedb.com free api for the backend service
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
