@@ -1,10 +1,12 @@
 # Frontend
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 it uses the themoviedb.com free api for the backend service
 
-try the DEMO =====> https://et-movie-review.herokuapp.com/
+try the DEMO =====> https://ethio-movie-review-imdb.vercel.app/
 
 ## Development server
+
 un `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
@@ -33,8 +35,8 @@ different sections of the movie like upcoming,most popular......
 you can get a detail overview about the movie including trailers and images of the movie
 ![](movie_review2.png)
 
-you can serach any movie by typing in the search box 
+you can serach any movie by typing in the search box
 ![](movie_review3.png)
 
-you can filter any movies by genres 
+you can filter any movies by genres
 ![](movie_review4.png)
